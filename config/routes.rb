@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
+  resources :meetups
   resources :examples
 
-  root 'examples#index'
+  root 'meetups#new'
 end

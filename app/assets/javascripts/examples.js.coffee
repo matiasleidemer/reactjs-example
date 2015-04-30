@@ -1,22 +1,21 @@
 $ ->
-
-  OneTimeClickLink = React.createClass
-    getInitialState: ->
-      {clicked: false}
-    linkClicked: (event) ->
-      @setState(clicked: true)
-    child: ->
-      {
-        false: React.DOM.a({href: 'javascript:void(0)', onClick: @linkClicked}, 'Click Me'),
-        true: React.DOM.span({}, 'You clicked the link')
-      }[@state.clicked]
-    render: ->
-      React.DOM.div({id: 'one-time-click-link'}, @child())
-
-  React.render(
-    React.createElement(OneTimeClickLink)
-    document.body
-  )
+  # OneTimeClickLink = React.createClass
+  #   getInitialState: ->
+  #     {clicked: false}
+  #   linkClicked: (event) ->
+  #     @setState(clicked: true)
+  #   child: ->
+  #     {
+  #       false: React.DOM.a({href: 'javascript:void(0)', onClick: @linkClicked}, 'Click Me'),
+  #       true: React.DOM.span({}, 'You clicked the link')
+  #     }[@state.clicked]
+  #   render: ->
+  #     React.DOM.div({id: 'one-time-click-link'}, @child())
+  #
+  # React.render(
+  #   React.createElement(OneTimeClickLink)
+  #   document.body
+  # )
 
   # --
   # virtualDomAfterClick = React.DOM.div(
