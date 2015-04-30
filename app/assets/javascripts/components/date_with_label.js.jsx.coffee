@@ -52,7 +52,7 @@ DateWithLabel = React.createClass
     `<option value={month} key={month}>{this.monthName(month)}</option>` for month in [0..11]
 
   daysOptions: ->
-    `<option value={date} key={date}>{date}-{this.dayName(date)}</option>` for date in [1..31]
+    `<option value={date} key={date}>{date + '-' +this.dayName(date)}</option>` for date in [1..31]
 
   render: ->
     `(
